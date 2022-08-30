@@ -7,8 +7,9 @@ export default{
         Color_Primary_80: '#272424CC',
         Color_Light: '#DC7B43',
         Color_Light_Blur: '#F2E8C040',
+        Color_Menu_Focus: '#DC7B43', //Color_MenuAfter_Focus
         Color_MenuAfter: '#423032',
-        Color_MenuAfter_Focus: '#DC7B43',
+        Color_MenuAfter_Focus: '#DC7B43', //Color_MenuAfter_Focus
         Color_Secundary: '#423032',
         Color_History: '#272424',
         Color_HistoryHolder: '#93826D',
@@ -17,5 +18,8 @@ export default{
     fonts:{
         Font_Primary: 'Julius Sans One',
         Font_Secundary: 'Kalam',
+    },
+    effects:{
+        blur: 'blur(0.09rem)',
     }
 };

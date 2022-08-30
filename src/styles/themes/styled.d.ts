@@ -9,6 +9,7 @@ declare module 'styled-components'{
             Color_Primary_80: string;
             Color_Light: string;
             Color_Light_Blur: string;
+            Color_Menu_Focus: string;
             Color_MenuAfter: string;
             Color_MenuAfter_Focus: string;
             Color_Secundary: string;
@@ -19,6 +20,9 @@ declare module 'styled-components'{
         fonts:{
             Font_Primary: string;
             Font_Secundary: string;
+        },
+        effects:{
+            blur: string;
         }
     }
 }

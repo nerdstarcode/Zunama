@@ -1,50 +1,37 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 3.75rem;
-    background: ${props => props.theme.colors.Color_Primary_80};
-    box-shadow: 0rem 0.25rem 0.6875rem 0.0625rem rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(1.25rem);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
     width: 100vw;
-`
-export const Nav = styled.nav`
+    height: 120vh;
     display: flex;
-    width: 60vw;
-    list-style-type: none;
-    justify-content: space-around;
-    font-family: ${props => props.theme.fonts.Font_Primary};
-    font-size: 1.2rem;
-    cursor: pointer;
+    justify-content: center;
+    padding-top: 3.75rem;
 `
-export const Li = styled.li`
-    position: relative;
-    transition: all 300ms ease;
-
-    &::after{
-        content: ' ';
-        width: 110%;
-        height: 0.25rem;
-        position: absolute;
-        bottom: -0.125rem;
-        left: 50%;
-        transform: translatex(-50%);
-        background: #423032;
-        border-radius: 2rem;
-        transition: all 800ms ease;
+export const ContainerLantern = styled.div`
+    width: 100vw;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    gap: 10vw;
+    justify-content: center;
+    @media screen and (min-width: 1200px){
+        grid-template-columns: 180px 180px 180px 180px;
+        gap: 120px;
     }
-    &:hover{
-        transition: all 300ms ease;
-        text-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_MenuAfter_Focus};
-        color: ${props => props.theme.colors.Color_MenuAfter_Focus}
+    @media screen and (max-width: 500px){
+        grid-template-columns: 10vw 25vw 25vw 10vw;
+        gap: 5vw;
     }
-    &:hover::after{
-        transition: all 800ms ease;
-        filter: blur(0.09rem);
-        box-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_MenuAfter_Focus};
-        background: ${props => props.theme.colors.Color_MenuAfter_Focus}
-    }
+    padding: 0 1.5rem;
+`
+export const Lantern = styled.div`
+    width: 100%;
+    max-width: 180px;
+    height: 3px;
+    border-radius: 1rem;
+    background: ${props => props.theme.colors.Color_MenuAfter_Focus};
+    transition: all 800ms ease;
+    filter: ${props => props.theme.effects.blur};
+    box-shadow: 0rem 0rem 3rem 0.3rem ${props => props.theme.colors.Color_Light_Blur};
+    background: ${props => props.theme.colors.Color_Light}
 `

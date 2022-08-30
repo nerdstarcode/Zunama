@@ -7,31 +7,43 @@ export const Container = styled.section`
     box-shadow: 0rem 0.25rem 0.6875rem 0.0625rem rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(1.25rem);
     display: flex;
-    justify-content: center
+    justify-content: center;
+    position: fixed;
+    top: 0;
 `
 export const MenuContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    position: fixed;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     max-width: 1200px;
-    padding: 0 0.625rem;
+    padding: 0 1.5rem;
 `
 export const Nav = styled.nav`
     display: flex;
     width: 60%;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: ${props => props.theme.fonts.Font_Primary};
     font-size: 1rem;
     cursor: pointer;
+    @media screen and (max-width: 600px){
+        background: ${props => props.theme.colors.Color_Primary_80};
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+        height: 100vh;
+        z-index: 100;
+    }
 `
 export const Li = styled.li`
     position: relative;
     transition: all 300ms ease;
-
     &::after{
         content: ' ';
         width: 110%;
@@ -46,12 +58,12 @@ export const Li = styled.li`
     }
     &:hover{
         transition: all 300ms ease;
-        text-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_MenuAfter_Focus};
+        text-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_Menu_Focus};
         color: ${props => props.theme.colors.Color_MenuAfter_Focus}
     }
     &:hover::after{
         transition: all 800ms ease;
-        filter: blur(0.09rem);
+        filter: ${props => props.theme.effects.blur};
         box-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_MenuAfter_Focus};
         background: ${props => props.theme.colors.Color_MenuAfter_Focus}
     }
