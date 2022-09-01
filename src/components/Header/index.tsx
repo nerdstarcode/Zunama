@@ -10,7 +10,7 @@ interface Props{
 }
 const Header: React.FC<Props> = ({toggleTheme}) =>{
     const { colors, title } = useContext(ThemeContext);
-    const [menu, setMenu ] = useState('active');
+    const [menu, setMenu ] = useState('burguer');
     const toggleButton = () => {
         setMenu(menu === 'burguer' ? 'active' : 'burguer');
     }

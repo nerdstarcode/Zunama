@@ -152,10 +152,31 @@ export const Photo = styled.article`
     
 `
 export const About = styled.article`
-    width: 65%;
-    padding: 0 2rem;
+    width: 71%;
+    padding: 0 0 0 2rem;
+    @media screen and (max-width: 1169px){
+        width: 69%;
+    }
+    @media screen and (max-width: 1105px){
+        width: 66%;
+    }
+    @media screen and (max-width: 1004px){
+        width: 65%;
+    }
+    @media screen and (max-width: 1000px){
+        width: 70%;
+    }
+    @media screen and (max-width: 882px){
+        width: 65%;
+    }
     @media screen and (max-width: 765px){
-        width: 54%;
+        width: 59%;
+    }
+    @media screen and (max-width: 659px){
+        width: 55%;
+    }
+    @media screen and (max-width: 604px){
+        width: 52%;
     }
     @media screen and (max-width: 600px){
         width: 100%;

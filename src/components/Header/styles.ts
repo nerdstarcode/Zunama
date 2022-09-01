@@ -24,7 +24,7 @@ export const MenuContainer = styled.div`
             letter-spacing: 0.4em;
             line-height: 1.6rem;
             font-family: ${props => props.theme.fonts.Font_Primary};
-            @media screen and (min-width: 600px){
+            @media screen and (min-width: 601px){
                 display: none;
             }
             @media screen and (max-width: 600px){

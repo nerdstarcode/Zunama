@@ -42,7 +42,7 @@ export default createGlobalStyle `
   button.burguer svg rect{
     fill: ${props => props.theme.colors.Color_MenuAfter};
   }
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 601px){
     button.burguer{
       display: none;
     }
