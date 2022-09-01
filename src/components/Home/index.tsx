@@ -1,6 +1,15 @@
 import React from 'react';
 import { Container, SectionHome, ContainerLantern, Lantern, Photo, About} from './styles';
 import { shade } from 'polished'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
 
 const Home: React.FC= () =>{
     
@@ -40,6 +49,34 @@ const Home: React.FC= () =>{
                         </p>
                     </div>
                 </About>
+                <div>
+                    <h4>Formação</h4>
+                    <div>
+                        <Swiper
+                            slidesPerView={2}
+                            spaceBetween={10}
+                            slidesPerGroup={2}
+                            loop={true}
+                            loopFillGroupWithBlank={true}
+                            pagination={{
+                            clickable: true,
+                            }}
+                            modules={[Pagination]}
+                            className="mySwiper"
+                            >
+                            <SwiperSlide className='slide'>Slide 1</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 2</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 3</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 4</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 5</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 6</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 7</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 8</SwiperSlide>
+                            <SwiperSlide className='slide'>Slide 9</SwiperSlide>
+                        </Swiper>
+                    </div>
+
+                </div>
             </SectionHome>
         </Container>
     );

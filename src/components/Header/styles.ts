@@ -5,7 +5,6 @@ export const Container = styled.section`
     width: 100vw;
     background: ${props => props.theme.colors.Color_Primary_80};
     box-shadow: 0rem 0.25rem 0.6875rem 0.0625rem rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(2rem);
     display: flex;
     justify-content: center;
     position: fixed;
@@ -28,6 +27,9 @@ export const MenuContainer = styled.div`
             @media screen and (min-width: 600px){
                 display: none;
             }
+            @media screen and (max-width: 600px){
+                font-size: 1rem;
+            }
         } 
     }
     @media screen and (min-width: 1200px){
@@ -35,7 +37,6 @@ export const MenuContainer = styled.div`
     }
     @media screen and (max-width: 600px){
         justify-content: space-between;
-        
     }
 
 `
@@ -74,6 +75,10 @@ export const Li = styled.li`
     position: relative;
     transition: all 300ms ease;
     cursor: pointer;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
     &::after{
         content: ' ';
         width: 110%;
@@ -91,12 +96,23 @@ export const Li = styled.li`
         text-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_Menu_Focus};
         color: ${props => props.theme.colors.Color_MenuAfter_Focus}
     }
-
     &:hover::after{
         transition: all 800ms ease;
         filter: ${props => props.theme.effects.blur};
         box-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_MenuAfter_Focus};
         background: ${props => props.theme.colors.Color_MenuAfter_Focus}
     }
+    &.active{
+        text-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_Menu_Focus};
+        color: ${props => props.theme.colors.Color_MenuAfter_Focus}
+    }
+    &.active::after{
+        transition: all 800ms ease;
+        filter: ${props => props.theme.effects.blur};
+        box-shadow: 0rem 0rem 0.375rem ${props => props.theme.colors.Color_MenuAfter_Focus};
+        background: ${props => props.theme.colors.Color_MenuAfter_Focus}
+    }
+    
 `
+
 

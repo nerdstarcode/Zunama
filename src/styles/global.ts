@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle `
-  
+  html{
+    scroll-behavior: smooth;
+  }
   *{
     margin: 0;
     padding: 0;
@@ -44,6 +46,9 @@ export default createGlobalStyle `
     button.burguer{
       display: none;
     }
+    .headerBlur{
+      backdrop-filter: blur(0.5rem);
+    }
   }
   @media screen and (max-width: 600px){
     .blur{
@@ -51,5 +56,5 @@ export default createGlobalStyle `
       -webkit-backdrop-filter:  blur(0.5rem);
     }
   }
- 
+  
 `

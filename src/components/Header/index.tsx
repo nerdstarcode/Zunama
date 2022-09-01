@@ -4,6 +4,7 @@ import Switch from 'react-switch'
 import { Container, MenuContainer, Nav, Li, } from './styles';
 import { shade } from 'polished'
 import {Lantern} from '../Home/styles'
+
 interface Props{
     toggleTheme(): void;
 }
@@ -13,14 +14,16 @@ const Header: React.FC<Props> = ({toggleTheme}) =>{
     const toggleButton = () => {
         setMenu(menu === 'burguer' ? 'active' : 'burguer');
     }
+    const [activeNav, setActiveNav] = useState('#')
+
     return(
         <Container>
-            <MenuContainer>
+            <MenuContainer className='headerBlur'>
                 <Nav className={'blur ' + menu}>
-                    <Li>Home</Li>
-                    <Li>Histórias</Li>
-                    <Li>Universos</Li>
-                    <Li>Contato</Li>
+                    <Li onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><a onClick={toggleButton} href='#'>Home</a></Li>
+                    <Li onClick={() => setActiveNav('#history')} className={activeNav === '#history' ? 'active' : ''} ><a onClick={toggleButton} href='#history'>Histórias</a></Li>
+                    <Li onClick={() => setActiveNav('#universe')} className={activeNav === '#universe' ? 'active' : ''}><a onClick={toggleButton} href='#universe'>Universos</a></Li>
+                    <Li onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><a onClick={toggleButton} href='#contact'>Contato</a></Li>
                 </Nav>
                 <Switch
                 onChange={ toggleTheme }
