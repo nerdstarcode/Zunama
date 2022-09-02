@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, SectionHome, ContainerLantern, Lantern, Photo, About} from './styles';
+import { Container, SectionHome, ContainerLantern, Lantern, Photo, About, Formacao, Destaques} from './styles';
 import { shade } from 'polished'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -49,7 +49,7 @@ const Home: React.FC= () =>{
                         </p>
                     </div>
                 </About>
-                <div>
+                <Formacao>
                     <h4>Formação</h4>
                     <div>
                         <Swiper
@@ -75,8 +75,21 @@ const Home: React.FC= () =>{
                             <SwiperSlide className='slide'>Slide 9</SwiperSlide>
                         </Swiper>
                     </div>
+                </Formacao>
+                <Destaques className='destaques'>
+                    <h4>Trabalhos Em Destaque</h4>
+                    <div className='destaques_articles'>
+                        <article className="destaque destaque_1">
 
-                </div>
+                        </article>
+                        <article className="destaque destaque_2">
+
+                        </article>
+                        <article className="destaque destaque_3">
+
+                        </article>
+                    </div>
+                </Destaques>
             </SectionHome>
         </Container>
     );

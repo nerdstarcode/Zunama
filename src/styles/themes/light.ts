@@ -21,5 +21,5 @@ export default{
     },
     effects:{
         blur: 'blur(0rem)',
-    }
+    },
 };

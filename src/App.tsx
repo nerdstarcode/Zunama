@@ -5,6 +5,7 @@ import GlobalStyle from './styles/global';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
+import pagination from './styles/variables/pagination';
 import usePersistendState from './utils/usePersistendState';
 function App() {
   const [theme, setTheme] = usePersistendState<DefaultTheme>('theme', light);

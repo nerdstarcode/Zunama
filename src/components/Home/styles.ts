@@ -39,77 +39,42 @@ export const SectionHome = styled.section`
     width: 100vw;
     max-width: 1200px;
     padding: 2rem 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    &>div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h4{
-            font-family: ${props => props.theme.fonts.Font_Primary};
-            font-size: 1.3rem;
-            padding: 3rem 0 1rem 0;
-            letter-spacing: 0.34em;
-            font-weight: 400;
-        }
-        .mySwiper{
-            width: 20rem;
-            height: 11.5rem;
-            z-index: 0;
-            @media screen and (max-width: 1000px){
-                width: 15rem;
-                height: 9rem;
-            }
-            @media screen and (max-width: 600px){
-                width: 18rem;
-                height: 10rem;
-            }
-            .slide{
-                height: 9rem;
-                display: flex;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                transition: all 600ms ease;
-                background: ${props => props.theme.colors.Color_Secundary};
-                box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), inset 0px 1.59055px 3.18111px -2.38583px #F2E8C0, inset 0px 3.18111px 10.3386px 6.36222px rgba(0, 0, 0, 0.25);
-                border-radius: 10.3386px;
-                @media screen and (max-width: 1000px){
-                height: 6.5rem;
-                }
-                @media screen and (max-width: 600px){
-                    height: 7.5rem;
-                }
-            }
-            
-            
-        }
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1000px){
+        grid-template-columns: 35% 65%;
     }
-    
-    @media screen and (max-width: 600px){
-        align-items: center;
-        flex-direction: column;
+    @media screen and (max-width: 700px){
+        grid-template-columns: 100%;
+        gap: 2rem;
     }
 `
 export const Photo = styled.article`
-    height: 388px;
-    width: 325px;
+    justify-self: center;
+    height: 300px;
+    width: 280px;
     border-radius: 0.5533rem;
     overflow: hidden;
     box-shadow: inset 0px 0px 22px 3px rgba(0, 0, 0, 0.6);
     background: ${props => props.theme.colors.Color_Primary};
-        transition: all 600ms ease;
+    transition: all 600ms ease;
     @media screen and (max-width: 1000px){
-        height: 300px;
-        width: 250px;
+        height: 280px;
+        width: 240px;
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 788px){
+        height: 240px;
+        width: 200px;
+    }
+    @media screen and (max-width: 700px){
         height: 363px;
         width: 300px;
     }
     .photo{
         width: 100%;
-        height: 80%;
+        height: 79%;
         display: grid;
         grid-template-columns: 10% 10% 10% 10%;
         background-image: url(./src/assets/home/zunama.png);
@@ -119,7 +84,7 @@ export const Photo = styled.article`
     }
     .control{
         width: 100%;
-        height: 17%;
+        height: 18%;
         display: grid;
         grid-template-columns: 39% 39%;
         gap: 10%;
@@ -127,6 +92,7 @@ export const Photo = styled.article`
         align-items: center;
     }
     .btn{
+        margin: auto 0;
         transition: all 600ms ease;
         background: ${props => props.theme.colors.Color_Primary};
         border: none;
@@ -134,13 +100,18 @@ export const Photo = styled.article`
         border-radius: 0.4838rem;
         font-family: ${props => props.theme.fonts.Font_Primary};
         font-weight: 400;
-
         color: ${props => props.theme.colors.Color};
         font-size: 1.2rem;
         height: 3rem;
         @media screen and (max-width: 1000px){
             font-size: 1rem;
             height: 2.5rem;
+        }
+        @media screen and (max-width: 788px){
+            font-size: 0.8rem;
+        }
+        @media screen and (max-width: 700px){
+            font-size: 1rem;
         }
     }
     .btn:hover{
@@ -149,39 +120,24 @@ export const Photo = styled.article`
         box-shadow: inset 0 0 0.6rem 0.2rem ${props => props.theme.colors.Color_Light};
         color: ${props => props.theme.colors.Color_Light};
     }
-    
 `
 export const About = styled.article`
-    width: 71%;
-    padding: 0 0 0 2rem;
-    @media screen and (max-width: 1169px){
-        width: 69%;
-    }
-    @media screen and (max-width: 1105px){
-        width: 66%;
-    }
-    @media screen and (max-width: 1004px){
-        width: 65%;
-    }
-    @media screen and (max-width: 1000px){
-        width: 70%;
-    }
-    @media screen and (max-width: 882px){
-        width: 65%;
-    }
-    @media screen and (max-width: 765px){
-        width: 59%;
-    }
-    @media screen and (max-width: 659px){
-        width: 55%;
-    }
-    @media screen and (max-width: 604px){
-        width: 52%;
-    }
-    @media screen and (max-width: 600px){
-        width: 100%;
-    } 
+    width: 100%;
+    padding-left: 2rem;
     user-select: none;
+    justify-self: center;
+    @media screen and (max-width: 1000px){
+        padding-left: 0.7rem;
+    } 
+    @media screen and (max-width: 700px){
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    } 
     header{
         width: max-content;
         h2{
@@ -191,11 +147,19 @@ export const About = styled.article`
             font-family: ${props => props.theme.fonts.Font_Primary};
             font-weight: 400;
             @media screen and (max-width: 760px){
-                font-size: 1.5rem;
+                font-size: 2rem;
                 letter-spacing: 0.4em;
-                line-height: 1.6rem;
+                line-height: 2rem;
+                
             }
+            
         }
+        @media screen and (max-width: 700px){
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }   
         @media screen and (max-width: 600px){
             display: none;
         }   
@@ -222,6 +186,140 @@ export const About = styled.article`
                 outline: 1px solid ${props => props.theme.colors.Color_Light};
             }
         }
+        @media screen and (max-width: 788px){
+            height: 159px;
+        }
+        @media screen and (max-width: 700px){
+            height: 250px;
+        }
     }
-    
+`
+export const Formacao = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    h4{
+        font-family: ${props => props.theme.fonts.Font_Primary};
+        font-size: 1.3rem;
+        padding: 3rem 0 1rem 0;
+        letter-spacing: 0.34em;
+        font-weight: 400;
+        @media screen and (max-width: 913px){
+            font-size: 1rem;
+        }
+        @media screen and (max-width: 700px){
+            font-size: 1.3rem;;
+        }
+    }
+    .mySwiper{
+        width: 325px;
+        height: 12rem;
+        z-index: 0;
+        @media screen and (max-width: 913px){
+            height: 10rem;
+            width: 257px;
+        }
+        @media screen and (max-width: 700px){
+            height: 11rem;
+            width: 18.75rem;
+        }
+        .slide{
+            width: 100%;
+            height: fit-content;
+            &::before{
+                content: "";
+                height: 0;
+                padding-bottom: 100%;
+            }
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            transition: all 600ms ease;
+            background: ${props => props.theme.colors.Color_Secundary};
+            box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), inset 0px 1.59055px 3.18111px -2.38583px #F2E8C0, inset 0px 3.18111px 10.3386px 6.36222px rgba(0, 0, 0, 0.25);
+            border-radius: 10.3386px;
+        }
+    }
+`
+export const Destaques = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    h4{
+        font-family: ${props => props.theme.fonts.Font_Primary};
+        font-size: 1.3rem;
+        padding: 3rem 0 1rem 0;
+        letter-spacing: 0.34em;
+        font-weight: 400;
+        @media screen and (max-width: 788px){
+            font-size: 1rem;
+        }
+        @media screen and (max-width: 700px){
+            font-size: 1.3rem;
+        }
+        
+    }
+    .destaques_articles{
+        width: 11rem;
+        height: 11rem;
+        display: grid;
+        grid-template-columns: 157.5px 157.5px 157.5px;
+        gap: 1rem;
+        justify-content: center;
+        justify-content: space-around;
+        @media screen and (max-width: 913px){
+            grid-template-columns: 123.5px 123.5px 123.5px;
+            gap: 0.5rem;
+        }
+        .destaque{
+            justify-self: center;
+            height: 157.5px;
+            width: 157.5px;
+            transition: all 600ms ease;
+            background: ${props => props.theme.colors.Color_Secundary};
+            box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), inset 0px 1.59055px 3.18111px -2.38583px #F2E8C0, inset 0px 3.18111px 10.3386px 6.36222px rgba(0, 0, 0, 0.25);
+            border-radius: 10.3386px;
+            
+            @media screen and (max-width: 913px){
+                width: 123.5px;
+                height: 123.5px;
+            }
+            @media screen and (max-width: 700px){
+                height: 157.5px;
+                width: 157.5px;
+                align-self: center;
+            }
+        }
+        @media screen and (max-width: 700px){
+            grid-template-columns: 10rem 10rem 10rem;
+            gap: 0.1rem;
+            align-self: center;
+            .destaque_1{
+                height: 80%;
+                width: 80%;
+                &:hover{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .destaque_2:hover{
+                height: 110%;
+                width: 110%;
+            }
+            .destaque_3{
+                height: 80%;
+                width: 80%;
+                &:hover{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
 `

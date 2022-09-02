@@ -30,6 +30,9 @@ export const MenuContainer = styled.div`
             @media screen and (max-width: 600px){
                 font-size: 1rem;
             }
+            @media screen and (max-width: 354px){
+                font-size: 0.8rem;
+            }
         } 
     }
     @media screen and (min-width: 1200px){
