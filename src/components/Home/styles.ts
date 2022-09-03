@@ -266,60 +266,33 @@ export const Destaques = styled.div`
         
     }
     .destaques_articles{
-        width: 11rem;
-        height: 11rem;
-        display: grid;
-        grid-template-columns: 157.5px 157.5px 157.5px;
-        gap: 1rem;
-        justify-content: center;
-        justify-content: space-around;
+        width: 30.3125rem;
+        height: 12rem;
+        z-index: 0;
         @media screen and (max-width: 913px){
-            grid-template-columns: 123.5px 123.5px 123.5px;
-            gap: 0.5rem;
+            width: 23.6rem;
+        }
+        @media screen and (max-width: 700px){
+            width: 16rem;
+            height: 18rem;
+
         }
         .destaque{
-            justify-self: center;
-            height: 157.5px;
-            width: 157.5px;
+            width: 100%;
+            height: fit-content;
+            &::before{
+                content: "";
+                height: 0;
+                padding-bottom: 100%;
+            }
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
             transition: all 600ms ease;
             background: ${props => props.theme.colors.Color_Secundary};
             box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), inset 0px 1.59055px 3.18111px -2.38583px #F2E8C0, inset 0px 3.18111px 10.3386px 6.36222px rgba(0, 0, 0, 0.25);
             border-radius: 10.3386px;
-            
-            @media screen and (max-width: 913px){
-                width: 123.5px;
-                height: 123.5px;
-            }
-            @media screen and (max-width: 700px){
-                height: 157.5px;
-                width: 157.5px;
-                align-self: center;
-            }
-        }
-        @media screen and (max-width: 700px){
-            grid-template-columns: 10rem 10rem 10rem;
-            gap: 0.1rem;
-            align-self: center;
-            .destaque_1{
-                height: 80%;
-                width: 80%;
-                &:hover{
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-            .destaque_2:hover{
-                height: 110%;
-                width: 110%;
-            }
-            .destaque_3{
-                height: 80%;
-                width: 80%;
-                &:hover{
-                    height: 100%;
-                    width: 100%;
-                }
-            }
         }
     }
 `

@@ -5,7 +5,6 @@ import GlobalStyle from './styles/global';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
-import pagination from './styles/variables/pagination';
 import usePersistendState from './utils/usePersistendState';
 function App() {
   const [theme, setTheme] = usePersistendState<DefaultTheme>('theme', light);
@@ -14,6 +13,8 @@ function App() {
     setTheme(theme.title === 'light' ? dark : light);
   }
   return (
+    <React.Fragment>
+
     <ThemeProvider theme={theme}>
       <div className="App">
         <GlobalStyle/>
@@ -21,6 +22,7 @@ function App() {
         <Header toggleTheme={toggleTheme}/>
       </div>
     </ThemeProvider>
+    </React.Fragment>
   )
 }
 

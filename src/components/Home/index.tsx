@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination } from "swiper";
 
 const Home: React.FC= () =>{
     
@@ -78,17 +78,40 @@ const Home: React.FC= () =>{
                 </Formacao>
                 <Destaques className='destaques'>
                     <h4>Trabalhos Em Destaque</h4>
-                    <div className='destaques_articles'>
-                        <article className="destaque destaque_1">
+                        <Swiper className='mySwiper destaques_articles'
+                        breakpoints={
+                            {
+                                700: {
+                                    slidesPerView: 1,
+                                    slidesPerGroup: 1,
 
-                        </article>
-                        <article className="destaque destaque_2">
+                                },
+                                // when window width is >= 768px
+                                701: {
+                                    slidesPerView: 3,
+                                    slidesPerGroup: 3,
+                                },
+                            }
+                        }
+                        spaceBetween={10}
+                        loop={false}
+                        loopFillGroupWithBlank={true}
+                        pagination={{
+                        clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        >
 
-                        </article>
-                        <article className="destaque destaque_3">
-
-                        </article>
-                    </div>
+                        <SwiperSlide className="destaque destaque_1 slide">
+                            autem
+                        </SwiperSlide>
+                        <SwiperSlide className="destaque destaque_2 slide">
+                            autem
+                        </SwiperSlide>
+                        <SwiperSlide className="destaque destaque_3 slide">
+                            autem
+                        </SwiperSlide>
+                        </Swiper>
                 </Destaques>
             </SectionHome>
         </Container>
