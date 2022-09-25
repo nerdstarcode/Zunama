@@ -6,6 +6,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
 import usePersistendState from './utils/usePersistendState';
+import Historys from './components/Historys';
 function App() {
   const [theme, setTheme] = usePersistendState<DefaultTheme>('theme', light);
 
@@ -20,6 +21,7 @@ function App() {
         <GlobalStyle/>
         <Home/>
         <Header toggleTheme={toggleTheme}/>
+        <Historys/>
       </div>
     </ThemeProvider>
     </React.Fragment>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
     width: 100vw;
-    height: 150vh;
+    min-height: 96vh;
     padding-top: 3.75rem;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ export const Lantern = styled.div`
     height: 3px;
     border-radius: 1rem;
     background: ${props => props.theme.colors.Color_MenuAfter_Focus};
-    transition: all 800ms ease;
+    transition: background-color 800ms ease;
     filter: ${props => props.theme.effects.blur};
     box-shadow: 0rem 0rem 3rem 0.3rem ${props => props.theme.colors.Color_Light_Blur};
     background: ${props => props.theme.colors.Color_Light}
@@ -59,7 +59,7 @@ export const Photo = styled.article`
     overflow: hidden;
     box-shadow: inset 0px 0px 22px 3px rgba(0, 0, 0, 0.6);
     background: ${props => props.theme.colors.Color_Primary};
-    transition: all 600ms ease;
+    transition: background-color 600ms ease;
     @media screen and (max-width: 1000px){
         height: 280px;
         width: 240px;
@@ -93,7 +93,7 @@ export const Photo = styled.article`
     }
     .btn{
         margin: auto 0;
-        transition: all 600ms ease;
+        transition: background-color 600ms ease;
         background: ${props => props.theme.colors.Color_Primary};
         border: none;
         box-shadow: inset 0 0 0.6rem 0.2rem rgba(0, 0, 0, 0.30);
@@ -115,7 +115,7 @@ export const Photo = styled.article`
         }
     }
     .btn:hover{
-        transition: all 600ms ease;
+        transition: background-color 600ms ease;
         cursor: pointer;
         box-shadow: inset 0 0 0.6rem 0.2rem ${props => props.theme.colors.Color_Light};
         color: ${props => props.theme.colors.Color_Light};
@@ -170,6 +170,7 @@ export const About = styled.article`
             font-family: ${props => props.theme.fonts.Font_Secundary};
             text-align: justify;
             text-indent: 0.5rem;
+            font-size: 1.1rem;
         }
         @media screen and (max-width: 1000px){
             overflow-y: scroll;
@@ -237,7 +238,7 @@ export const Formacao = styled.div `
             text-align: center;
             align-items: center;
             justify-content: center;
-            transition: all 600ms ease;
+            transition: background-color 600ms ease;
             background: ${props => props.theme.colors.Color_Secundary};
             box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), inset 0px 1.59055px 3.18111px -2.38583px #F2E8C0, inset 0px 3.18111px 10.3386px 6.36222px rgba(0, 0, 0, 0.25);
             border-radius: 10.3386px;
@@ -289,7 +290,7 @@ export const Destaques = styled.div`
             text-align: center;
             align-items: center;
             justify-content: center;
-            transition: all 600ms ease;
+            transition: background-color 600ms ease;
             background: ${props => props.theme.colors.Color_Secundary};
             box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), inset 0px 1.59055px 3.18111px -2.38583px #F2E8C0, inset 0px 3.18111px 10.3386px 6.36222px rgba(0, 0, 0, 0.25);
             border-radius: 10.3386px;

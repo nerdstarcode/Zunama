@@ -22,4 +22,7 @@ export default{
     effects:{
         blur: 'blur(0rem)',
     },
+    background:{
+        background: 'url(../public/history/light.png)'
+    }
 };

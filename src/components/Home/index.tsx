@@ -42,10 +42,10 @@ const Home: React.FC= () =>{
                     </header>
                     <div className='containerText'>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quam aperiam, nobis odit ducimus consequatur ab repudiandae, dolores error, autem labore veritatis necessitatibus aut. Repudiandae quibusdam tenetur maiores illo. Alias, architecto! Dolore sit asperiores autem, laborum veniam accusantium ipsum labore, inventore repellat in rerum omnis? Iure ipsam id, nobis in cum error aspernatur placeat. Dolor illo, quod ut cumque maiores velit aperiam laborum, facilis natus iste dolorem eveniet nostrum saepe temporibus? Ex veritatis eaque quod nisi modi doloribus illum nostrum qui, dolorem, ut magni molestias possimus illo minus assumenda molestiae dolores? Assumenda optio non cupiditate esse saepe modi, cum aliquid.
+                            Olá, sou Bruno Alves, formado na instituição UNINOVE no curso de Tecnólogo Jogos Digitais, e atualmente estou cursando Pós-graduação em Cinema & Linguagem Audiovisual na instituição ESTÁCIO. Também sempre procuro cursos correlacionados a cinema e/ou roteiro. Atualmente estou fazendo curso de Inglês pela instituição King of Lenguages, e também Teatro. 
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quam aperiam, nobis odit ducimus consequatur ab repudiandae, dolores error, autem labore veritatis necessitatibus aut. Repudiandae quibusdam tenetur maiores illo. Alias, architecto! Dolore sit asperiores autem, laborum veniam accusantium ipsum labore, inventore repellat in rerum omnis? Iure ipsam id, nobis in cum error aspernatur placeat. Dolor illo, quod ut cumque maiores velit 
+                            Sempre procuro conhecimento na área de história para abranger meu conhecimento ainda mais para poder criar meus roteiros e meus livros. Sei que tenho um potencial enorme e que ainda sim preciso de mais experiência para melhorar ainda mais meu conhecimento e conseguir atingir meu sonho.
                         </p>
                     </div>
                 </About>
@@ -64,15 +64,15 @@ const Home: React.FC= () =>{
                             modules={[Pagination]}
                             className="mySwiper"
                             >
-                            <SwiperSlide className='slide'>Slide 1</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 2</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 3</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 4</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 5</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 6</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 7</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 8</SwiperSlide>
-                            <SwiperSlide className='slide'>Slide 9</SwiperSlide>
+                            <SwiperSlide key="s1" className='slide'>Slide 1</SwiperSlide>
+                            <SwiperSlide key="s2" className='slide'>Slide 2</SwiperSlide>
+                            <SwiperSlide key="s3" className='slide'>Slide 3</SwiperSlide>
+                            <SwiperSlide key="s4" className='slide'>Slide 4</SwiperSlide>
+                            <SwiperSlide key="s5" className='slide'>Slide 5</SwiperSlide>
+                            <SwiperSlide key="s6" className='slide'>Slide 6</SwiperSlide>
+                            <SwiperSlide key="s7" className='slide'>Slide 7</SwiperSlide>
+                            <SwiperSlide key="s8" className='slide'>Slide 8</SwiperSlide>
+                            <SwiperSlide key="s9" className='slide'>Slide 9</SwiperSlide>
                         </Swiper>
                     </div>
                 </Formacao>

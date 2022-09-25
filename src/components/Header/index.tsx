@@ -20,10 +20,10 @@ const Header: React.FC<Props> = ({toggleTheme}) =>{
         <Container>
             <MenuContainer className='headerBlur'>
                 <Nav className={'blur ' + menu}>
-                    <Li onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><a onClick={toggleButton} href='#'>Home</a></Li>
-                    <Li onClick={() => setActiveNav('#history')} className={activeNav === '#history' ? 'active' : ''} ><a onClick={toggleButton} href='#history'>Histórias</a></Li>
-                    <Li onClick={() => setActiveNav('#universe')} className={activeNav === '#universe' ? 'active' : ''}><a onClick={toggleButton} href='#universe'>Universos</a></Li>
-                    <Li onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><a onClick={toggleButton} href='#contact'>Contato</a></Li>
+                    <Li key='1' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><a onClick={toggleButton} href='#'>Home</a></Li>
+                    <Li key='2' onClick={() => setActiveNav('#history')} className={activeNav === '#history' ? 'active' : ''} ><a onClick={toggleButton} href='#history'>Histórias</a></Li>
+                    <Li key='3' onClick={() => setActiveNav('#universe')} className={activeNav === '#universe' ? 'active' : ''}><a onClick={toggleButton} href='#universe'>Universos</a></Li>
+                    <Li key='4' onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><a onClick={toggleButton} href='#contact'>Contato</a></Li>
                 </Nav>
                 <Switch
                 onChange={ toggleTheme }

@@ -21,5 +21,8 @@ export default{
     },
     effects:{
         blur: 'blur(0.09rem)',
+    },
+    background:{
+        background: 'url(../public/history/dark.png)'
     }
 };

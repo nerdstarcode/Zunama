@@ -23,6 +23,9 @@ declare module 'styled-components'{
         },
         effects:{
             blur: string;
+        },
+        background:{
+            background: string;
         }
     }
 }
